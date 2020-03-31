@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -126,7 +131,7 @@ nav li {
 
 .mobile-div {
     background-color: white;
-    display: none;
+    display: block;
     height: 100vh;
     position: absolute;
     right: 0;
@@ -152,6 +157,10 @@ nav li {
 
 .hamburger-icon:focus ~ .mobile-div {
     width: 70vw;
+}
+
+.hamburger-icon:focus ~ .mobile-div a {
+    display: block;
 }
 
 /* --- section 1 --- */
@@ -688,7 +697,7 @@ header section {
         top: 15px;
     }
     
-    .hamburger-icon, .mobile-div, .mobile-div a {
+    .hamburger-icon {
         display: block;
     }
     
