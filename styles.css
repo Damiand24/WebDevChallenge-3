@@ -131,9 +131,8 @@ nav li {
     position: absolute;
     right: 0;
     text-align: center;
-    transform: translateX(100%);
-    transition: transform .3s ease-in-out;
-    width: 70vw;
+    transition: width .3s ease-in-out;
+    width: 0;
 }
 
 .mobile-div::before {
@@ -152,7 +151,7 @@ nav li {
 }
 
 .hamburger-icon:focus ~ .mobile-div {
-    transform: translateX(0);
+    width: 70vw;
 }
 
 /* --- section 1 --- */
@@ -678,11 +677,7 @@ header section {
     }
 }
 
-@media (max-width: 768px) {   
-    html, body {
-    overflow-x: hidden;
-    }
-    
+@media (max-width: 768px) {     
     .top {
         height: 60px;  
     }
