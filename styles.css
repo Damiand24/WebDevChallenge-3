@@ -4,8 +4,9 @@
 }
 
 html, body {
-    width: 100%;
     overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 a {
@@ -88,7 +89,7 @@ nav li {
     list-style-type: none;   
 }
 
-.menu, .mobile-div a {
+.menu, .mobile-nav a {
     color: #777777;
 }
 
@@ -97,7 +98,7 @@ nav li {
     padding: 0 15px;
 }
 
-.menu:hover, .mobile-div a:hover {
+.menu:hover, .mobile-nav a:hover {
     color: black;
 }
 
@@ -129,18 +130,19 @@ nav li {
     transform: translateY(15px);
 }
 
-.mobile-div {
+.mobile-nav {
     background-color: white;
-    display: block;
+    display: inline-block;
     height: 100vh;
     position: absolute;
     right: 0;
     text-align: center;
-    transition: width .3s ease-in-out;
-    width: 0;
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+    width: 70%;
 }
 
-.mobile-div::before {
+.mobile-nav::before {
     background-color: #7cc576;
     content: '';
     display: inline-block;
@@ -149,21 +151,17 @@ nav li {
     width: 50%;
 }
 
-.mobile-div a {
-    display: none;
+.mobile-nav a {
+    display: block;
     font-size: 17px;
     padding: 10px 0;
 }
 
-.hamburger-icon:focus ~ .mobile-div {
-    width: 70vw;
+.hamburger-icon:focus ~ .mobile-nav {
+    transform: translateX(0);
 }
 
-.hamburger-icon:focus ~ .mobile-div a {
-    display: block;
-}
-
-/* --- section 1 --- */
+/* --- digital-solutions --- */
     
 section {
     margin-top: 50px;
@@ -177,7 +175,6 @@ header section {
     background-color: rgb(0, 0, 0, 0.7);
     display: flex;
     height: 100%;
-    z-index: 100;
 }
 
 .background-1 {
@@ -185,12 +182,12 @@ header section {
     background-size: cover;
 }
 
-.section1 {  
+.digital-solutions {  
     height: 530px; 
     width: 100%;
 }
 
-.section1 .title {
+.digital-solutions .title {
     font-size: 60px;
     margin: 0 10px;
 }
@@ -209,7 +206,7 @@ header section {
     letter-spacing: -0.5px;
 }
 
-.section1 .subtitle {
+.digital-solutions .subtitle {
     margin: 10px 0;
 }
 
@@ -222,7 +219,7 @@ header section {
     font-weight: 700;
     margin-top: 3%;
     padding: 25px 57px;
-    transition: color .6s ease-in-out;
+    transition: background-color, color, .2s linear;
 }
 
 .section-a:hover {
@@ -230,47 +227,47 @@ header section {
     color: #7cc576;
 }
 
-/* --- section 2 --- */
+/* --- services --- */
 
-.section2 {
+.services {
     display: flex;
     flex-direction: column;  
 }
 
-.section2 .subtitle {
+.services .subtitle {
     margin-top: 10px;
 }
 
-.section2 .section-container {
+.services .section-container {
     margin-top: 30px;
     width: 80%;
 }
 
-.section2 img {
+.services img {
     height: 60px;
     width: auto;
 }
 
-.section2 h4 {
+.services h4 {
     padding: 15px;
 }
 
-.section2 span p {
+.services div p {
     color: darkgrey;
     margin: 0 15px;
     width: 90%;
 }
 
-/* --- section 3 --- */
+/* --- relax --- */
 
-.section3 {
+.relax {
     display: flex;
     flex-wrap: nowrap;
     height: 600px;
     width: 100%;
 }
 
-.section3 .section-container {
+.relax .section-container {
     background-color: #E3E3E3;
     display: inline-block;
     float: left;
@@ -311,7 +308,7 @@ header section {
     font-size: 20px;
 }
 
-.section3 .title {
+.relax .title {
     color: white;
     font-size: 55px;
     text-align: left;
@@ -331,34 +328,34 @@ header section {
     color: #7cc576;
 }
 
-/* --- section 4 --- */
+/* --- projects --- */
 
-.section4 {
+.projects {
     margin-left: 5%;
 }
 
-.section4 .title, .section2 .title {
+.projects .title, .projects .title {
     font-size: 36px;
 }
 
-.section4 .subtitle {
+.projects .subtitle {
     padding-bottom: 30px;
 }
 
-.section4 h3 {
+.projects h3 {
     margin: 10px 0 10px 0;
 }
 
-.section4 .section-container {
+.projects .section-container {
     flex: 1;
     margin-left: 15%;
 }
 
-.section4-icon {
+.projects-icon {
     float: left;
     height: 65px;
     padding-right: 10px;
-    width: 65px;
+    width: auto;
 }
 
 .icon-div {
@@ -388,7 +385,7 @@ header section {
     margin: 20px 0 0 5px;
 }
 
-.section4 a:hover {
+.projects a:hover {
     text-decoration: underline;
 }
 
@@ -396,47 +393,43 @@ header section {
     font-size: 18px;   
 }
 
-.font-small {
-    font-size: 16px;
-}
+/* --- culture & values --- */
 
-/* --- section 5 --- */
-
-.section5 {
+.culture_values {
     background-color: #f9f9f9;
 }
 
-.section5 .title {
+.culture_values .title {
     font-size: 50px;
     padding: 50px 0 10px 0;
 }
 
-.section5 .subtitle {
+.culture_values .subtitle {
    font-size: 25px;
 }
 
-.section5 .section-container {
+.culture_values .section-container {
     height: auto;
     margin: 50px auto;
     max-width: 1200px;
     padding-bottom: 50px;
 }
 
-.section5-icon {
+.culture_values-icon {
     height: 100px;
     width: auto;
 }
 
-.section5 div {
+.culture_values div {
     padding: 0 10px;
 }
 
-.section5 h4 {
+.culture_values h4 {
     font-size: 20px;
     margin: 20px 0;
 }
 
-.relative {
+.culture_values-middle {
     position: relative;
 }
 
@@ -455,22 +448,22 @@ header section {
     right: -115px;
 }
 
-/* --- section 6 --- */
+/* --- clients --- */
 
-.section6 {
+.clients {
     margin: 0 10%;
 }
 
-.section6 .title, .section7 .title {
+.clients .title, .contact .title {
     font-size: 40px;
 }
 
-.section6 .subtitle {
+.clients .subtitle {
     font-size: 20px;
     margin-top: 10px;
 }
 
-.section6 .section-container {
+.clients .comment {
     background-color: #f0f0f0; 
     border-radius: 20px;
     line-height: 28px;
@@ -500,41 +493,41 @@ header section {
      
 }
 
-.section6 div p:first-child {
+.clients .comment p:first-child {
     color:  #777777;
     font-size: 27px;
 }
 
-.section6 .green {
+.clients .green {
     padding-top: 15px;
     text-align: center;
 }
 
-/* --- section 7 --- */
+/* --- contact --- */
 
-.section7 {
+.contact {
     background-color: #7cc576;
     padding-bottom: 80px;
 }
 
-.section7 .title {
+.contact .title {
     line-height: 49px;
     padding: 40px;
 }
 
-.section7 a {
+.contact a {
     border: 3px solid white;
     border-radius: 7px;
     padding: 13px;
     transition: background .5s ease-in-out;
 }
 
-.section7 a:hover {
+.contact a:hover {
     background-color: white;
     color: #7cc576;
 }
 
-/* --- section 8 --- */
+/* --- other-logo --- */
 
 .logo-image {
     height: 13%;
@@ -612,7 +605,7 @@ header section {
 /* --- mobile --- */
 
 @media (max-width: 1240px) {
-    .section5 h4 {
+    .culture_values h4 {
         font-size: 18px;
     }
 
@@ -626,13 +619,13 @@ header section {
         right: -90px;
     }
 
-    .section4 .section-container {
+    .projects .section-container {
         margin-left: 0;
     }
 }
 
 @media (max-width: 960px) {   
-    .section3 .title {
+    .relax .title {
         font-size: 45px;
     }
 
@@ -640,7 +633,7 @@ header section {
         display: none;
     }
 
-    .section4 .section-container {
+    .projects .section-container {
         padding-right: 10%;
     }
     
@@ -673,28 +666,35 @@ header section {
         width: 20%;
     }
     
-    .section6 .section-container {
-        padding: 20px;
+    .clients .comment {
+        padding: 15px;
     }
     
-    .section6 div p:first-child {
+    .clients .comment p:first-child {
         font-size: 18px;
     }
     
-    .section6 .green {
+    .clients .green {
         font-size: 14px;
     }
 }
 
 @media (max-width: 768px) {     
     .top {
-        height: 60px;  
+        background-color: white;
+        height: 60px; 
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
     }
     
     .logo-div, .hamburger-icon {
         left: 10px;
-        position: absolute;
+        position: fixed;
         top: 15px;
+        z-index: 3;
     }
     
     .hamburger-icon {
@@ -740,15 +740,15 @@ header section {
 }
 
 @media (max-width: 645px) {
-    .section2 .section-container, .section5 .section-container {
+    .services .section-container, .culture_values .section-container {
         flex-direction: column;
     }
 
-    .section2 span, .section5 div, .circle {
+    .srvices span, .culture_values div, .circle {
         margin-top: 20px;
     }
 
-    .section3 .section-container, .line::before, .line::after {
+    .relax .section-container, .line::before, .line::after {
         display: none;
     }
     
@@ -766,16 +766,16 @@ header section {
         
     .arrow-left::before {  
         left: 50%;
+        margin-left: -10px;
         top: 0;
-        transform: rotate(90deg);
-        margin-left: -10px;  
+        transform: rotate(90deg);          
     } 
     
     .arrow-right:after {
-        top: 0;
-        transform: rotate(-90deg);
-        right: 50%;
         margin-right: -10px;
+        right: 50%;
+        top: 0;
+        transform: rotate(-90deg);         
     }
     
     .bottom-footer {
@@ -785,11 +785,11 @@ header section {
 
 
 @media screen and (max-width: 480px) {
-    .section1 .title {
+    .digital-solutions .title {
         font-size: 50px;
     }
     
-    .section8 {
+    .other-logo {
         flex-direction: column;
     }
     
@@ -820,16 +820,11 @@ header section {
         padding: 25px 25px;
     }
     
-    .section3 .title {
+    .relax .title {
         font-size: 38px;
     }
     
-    .section5 .subtitle {
+    .culture_values .subtitle {
         font-size: 22px;
     }
 }
-
-
-
-
-
