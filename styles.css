@@ -135,6 +135,7 @@ nav li {
     display: inline-block;
     height: 100vh;
     position: absolute;
+    top: 60px;
     right: 0;
     text-align: center;
     transform: translateX(100%);
